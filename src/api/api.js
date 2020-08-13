@@ -3,11 +3,11 @@ import axios from "axios";
 let myTwitchUrl;
 let whitelistUrl;
 if (process.env.NODE_ENV === "development") {
-    myTwitchUrl = "http://localhost:3000/check-if-online/";
-    whitelistUrl = "http://localhost:3000/submit-ip/";
+    myTwitchUrl = "http://localhost:3002/check-if-online/";
+    whitelistUrl = "http://localhost:3003/ip/";
 } else {
-    myTwitchUrl = "http://51.81.48.159:3002/check-if-online/";
-    whitelistUrl = "http://51.81.48.159:3002/submit-ip/";
+    myTwitchUrl = "http://pmarp.com:3002/check-if-online/";
+    whitelistUrl = "http://pmarp.com:3003/ip/";
 }
 
 const ipUrl =
