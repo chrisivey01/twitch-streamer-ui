@@ -10,7 +10,6 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        // width: "20vw",
         height: "20vh",
         paddingLeft: "20px",
         paddingRight: "20px",
@@ -126,18 +125,3 @@ const Streamers = (props) => {
 };
 
 export default Streamers;
-
-// channel: {status: "PMA-RP coding a web app", display_name: "chrisivey01",…}
-// display_name: "chrisivey01"
-// followers: 176
-// status: "PMA-RP coding a web app"
-// url: "https://www.twitch.tv/chrisivey01"
-// views: 2034
-// featured: true
-// game: "Grand Theft Auto V"
-// preview: {small: "https://static-cdn.jtvnw.net/previews-ttv/live_user_chrisivey01-80x45.jpg",…}
-// large: "https://static-cdn.jtvnw.net/previews-ttv/live_user_chrisivey01-640x360.jpg"
-// medium: "https://static-cdn.jtvnw.net/previews-ttv/live_user_chrisivey01-320x180.jpg"
-// small: "https://static-cdn.jtvnw.net/previews-ttv/live_user_chrisivey01-80x45.jpg"
-// template: "https://static-cdn.jtvnw.net/previews-ttv/live_user_chrisivey01-{width}x{height}.jpg"
-// viewers: 14

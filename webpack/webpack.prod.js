@@ -15,5 +15,7 @@ module.exports = merge(common, {
             inject: true,
             template:"src/index.html",
         })
-    ]
+    ],
+    devtool: "inline-source-map",
+
 })

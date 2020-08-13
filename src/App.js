@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from "react";
-import * as apis from "./api/api";
+import * as Apis from "./api/api";
 import { useDispatch } from "react-redux";
-import { getTwitchStreamers } from "./store/actions/index";
+import { getTwitchStreamers } from "./store/actions/twitch.actions";
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import TwitchLayout from './components/TwitchLayout';
+import TwitchLayout from "./components/twitch-layout";
+import Whitelist from "./components/whitelist";
+import Header from "./components/Header";
 
 const App = () => {
     const dispatch = useDispatch();
     //obtain data from my api for twitch
     useEffect(() => {
-        apis.getTwitchStreamers().then((results) => {
+        Apis.getTwitchStreamers().then((results) => {
             dispatch(getTwitchStreamers(results));
         }, []);
     });
 
-    return <TwitchLayout/>;
+    return (
+        <div>
+            <Header />
+            <Switch>
+                <Route exact path="/" component={TwitchLayout} />
+                <Route path="/whitelist" component={Whitelist} />
+            </Switch>
+        </div>
+    );
 };
 
 export default App;

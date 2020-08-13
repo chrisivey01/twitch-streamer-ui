@@ -1,4 +1,4 @@
-import { GET_TWITCH_STREAMERS } from "../actions/index";
+import { GET_TWITCH_STREAMERS } from "../actions/twitch.actions";
 
 const initialState = {
     twitchStreamers: [],
