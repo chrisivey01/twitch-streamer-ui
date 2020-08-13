@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectIp = state => state.ip;
+const selectIpDetails = state => state.whitelist.ipDetails;
 
-export const selectIpInformation = createSelector(
-    [selectIp],
-    ip => ip
+export const selectIp = createSelector(
+    [selectIpDetails],
+    ipDetails => ipDetails.IPv4
 )

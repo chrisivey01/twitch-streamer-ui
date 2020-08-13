@@ -4,5 +4,5 @@ import whiteListReducer from "./reducers/whitelist.reducer";
 
 export default combineReducers({
     twitchReducer,
-    ip: whiteListReducer
+    whitelist:whiteListReducer
 })

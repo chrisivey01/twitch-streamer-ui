@@ -16,6 +16,7 @@ const Whitelist = (props) => {
     }, []);
 
     const fivem = () => {
+        Apis.setWhitelist(props.ip).then(results => console.log(results.data.finishedMessage));
         window.location = "fivem://connect/fivem.pmarp.com:30120";
     };
 
@@ -23,15 +24,19 @@ const Whitelist = (props) => {
         <Container fixed>
             <Button onClick={() => fivem()}>Launch the game</Button>
             <Typography>
-                {props.ip ? props.ip.ip : null} is now whitelisted until the
+                {props.ip ? props.ip : null} is now whitelisted until the
                 Linux Box restarts!
+            </Typography>
+
+            <Typography>
+                I know this looks like crap, but it'll get better... lol
             </Typography>
         </Container>
     );
 };
 
 const mapStateToProps = createStructuredSelector({
-    ip: selectors.selectIpInformation,
+    ip: selectors.selectIp,
 });
 
 export default connect(mapStateToProps)(Whitelist);

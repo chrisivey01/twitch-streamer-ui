@@ -1,7 +1,7 @@
 import { GET_IP } from "../actions/whitelist.actions";
 
 const initialState = {
-    ip:''
+    ipDetails:{}
 }
 
 const whiteListReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const whiteListReducer = (state = initialState, action) => {
         case GET_IP:
             return {
                 ...state,
-                ip: action.ip.data.IPv4
+                ipDetails: action.ipDetails.data
             }
         default: 
             return state;
