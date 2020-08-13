@@ -9,7 +9,7 @@ const whiteListReducer = (state = initialState, action) => {
         case GET_IP:
             return {
                 ...state,
-                ipDetails: action.ipDetails.data
+                ipDetails: action.payload
             }
         default: 
             return state;

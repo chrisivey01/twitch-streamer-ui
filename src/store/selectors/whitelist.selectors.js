@@ -4,5 +4,5 @@ const selectIpDetails = state => state.whitelist.ipDetails;
 
 export const selectIp = createSelector(
     [selectIpDetails],
-    ipDetails => ipDetails.IPv4
+    ipDetails => ipDetails.ip
 )

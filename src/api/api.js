@@ -11,14 +11,14 @@ if (process.env.NODE_ENV === "development") {
 }
 
 const ipUrl =
-    "https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572";
+    "https://api.ipify.org?format=json";
 
 export const getTwitchStreamers = () => {
     return axios.post(myTwitchUrl);
 };
 
 export const getIpUrl = () => {
-    return axios.post(ipUrl);
+    return axios.get(ipUrl);
 };
 
 export const setWhitelist = (ip) => {

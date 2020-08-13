@@ -11,7 +11,7 @@ const Whitelist = (props) => {
 
     useEffect(() => {
         Apis.getIpUrl().then((results) => {
-            dispatch(actions.getIp(results));
+            dispatch(actions.getIp(results.data));
         });
     }, []);
 
@@ -28,9 +28,6 @@ const Whitelist = (props) => {
                 Linux Box restarts!
             </Typography>
 
-            <Typography>
-                I know this looks like crap, but it'll get better... lol
-            </Typography>
         </Container>
     );
 };
