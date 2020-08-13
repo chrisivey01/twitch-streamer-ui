@@ -6,8 +6,8 @@ if (process.env.NODE_ENV === "development") {
     myTwitchUrl = "http://localhost:3000/check-if-online/";
     whitelistUrl = "http://localhost:3000/submit-ip/";
 } else {
-    myTwitchUrl = "http://fivem.pmarp.com:3000/check-if-online/";
-    whitelistUrl = "http://fivem.pmarp.com:3000/submit-ip/";
+    myTwitchUrl = "http://fivem.pmarp.com:3002/check-if-online/";
+    whitelistUrl = "http://fivem.pmarp.com:3002/submit-ip/";
 }
 
 const ipUrl =
