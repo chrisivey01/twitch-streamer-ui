@@ -22,10 +22,13 @@ const Whitelist = (props) => {
 
     return (
         <Container fixed>
-            <Button onClick={() => fivem()}>Launch the game</Button>
+            <Button variant="contained" color="primary" component="span" onClick={() => fivem()}>Launch the game</Button>
             <Typography>
                 {props.ip ? props.ip : null} is now whitelisted until the
                 Linux Box restarts!
+            </Typography>
+            <Typography variant='h4'>
+                If you do not see your IP - Please turn your ad blocker off.
             </Typography>
 
         </Container>
