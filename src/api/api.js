@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === "development") {
     whitelistUrl = "http://localhost:3003/ip/";
 } else {
     myTwitchUrl = "http://pmarp.com:3002/check-if-online/";
-    whitelistUrl = "http://pmarp.com:3003/ip/";
+    whitelistUrl = "http://127.0.0.1:3003/ip/";
 }
 
 const ipUrl =
