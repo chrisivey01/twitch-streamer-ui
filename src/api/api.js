@@ -2,6 +2,7 @@ import axios from "axios";
 
 let myTwitchUrl;
 let whitelistUrl;
+let mainUrl;
 if (process.env.NODE_ENV === "development") {
     myTwitchUrl = "http://localhost:3002/check-if-online/";
     whitelistUrl = "http://localhost:3003/ip/";
@@ -24,3 +25,7 @@ export const getIpUrl = () => {
 export const setWhitelist = (ip) => {
     return axios.post(whitelistUrl, {'ip':ip});
 };
+
+export const main = () => {
+    return axios.post(mainUrl)
+}
