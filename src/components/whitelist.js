@@ -5,6 +5,7 @@ import * as actions from "../store/actions/whitelist.actions";
 import * as selectors from "../store/selectors/whitelist.selectors";
 import { Container, Button, Typography } from "@material-ui/core";
 import { createStructuredSelector } from "reselect";
+import AdBlockDetect from 'react-ad-block-detect';
 
 const Whitelist = (props) => {
     const dispatch = useDispatch();
@@ -22,6 +23,9 @@ const Whitelist = (props) => {
 
     return (
         <Container fixed>
+            <AdBlockDetect>
+                <p>Show this if an ad blocker has been enabled.</p>
+            </AdBlockDetect>
             <Button variant="contained" color="primary" component="span" onClick={() => fivem()}>Launch the game</Button>
             <Typography>
                 {props.ip ? props.ip : null} is now whitelisted until the
