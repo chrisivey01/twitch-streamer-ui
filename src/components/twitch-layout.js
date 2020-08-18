@@ -27,20 +27,23 @@ const useStyles = makeStyles((theme) => ({
     },
     divider:{
         backgroundColor:"#E3E3E3"
-    }
+    },
+    bigBootyBitches: {
+        backgroundColor: "transparent",
+    },
 }));
 
 const TwitchLayout = (props) => {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Container>
+            <Container className={classes.bigBootyBitches}>
                 <Streamers
                     title={"Featured Streamers"}
                     data={props.streamers}
                     featured={true}
                 />
-                <Divider variant="middle" />
+                <Divider variant="middle" className={classes.bigBootyBitches} />
                 <Streamers
                     title={"Streamers"}
                     data={props.streamers}

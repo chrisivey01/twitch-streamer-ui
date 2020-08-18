@@ -27,10 +27,17 @@ const useStyles = makeStyles((theme) => ({
     toolBarItems: {
         margin: "0 25px 0px 10px",
         variant: "fullWidth",
+        fontFamily: "Corbel",
+        fontSize: "2vw",
+        textAlign: "center",
+        color: "var(--text)",
+        paddingLeft: 0,
     },
     buttonGroup: {
         "& .MuiButton-root":{
         color: "var(--text)",
+        fontSize: "1vw",
+        fontFamily: "Corbel",
         }
     }
 }));
