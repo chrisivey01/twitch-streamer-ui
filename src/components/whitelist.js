@@ -3,11 +3,23 @@ import * as Apis from "../api/api";
 import { connect, useDispatch, useSelector } from "react-redux";
 import * as actions from "../store/actions/whitelist.actions";
 import * as selectors from "../store/selectors/whitelist.selectors";
-import { Container, Button, Typography } from "@material-ui/core";
+import { Container, Button, Typography, Divider } from "@material-ui/core";
 import { createStructuredSelector } from "reselect";
 import AdBlockDetect from 'react-ad-block-detect';
+import { makeStyles } from "@material-ui/core/styles";
+import "./Layout.scss"
+
+const useStyles = makeStyles((theme) => ({
+    bigBootyBitches: {
+        backgroundColor: "transparent",
+    },
+    text : {
+        color: "var(--text)",
+    }
+}));
 
 const Whitelist = (props) => {
+    const classes = useStyles();
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -24,16 +36,15 @@ const Whitelist = (props) => {
     return (
         <Container fixed>
             <AdBlockDetect>
-                <p>Show this if an ad blocker has been enabled.</p>
+                <p className={classes.text}>Hey! You have your adblocker turned on! If you don't see your IP you need to turn it off.</p>
             </AdBlockDetect>
+            <p></p>
             <Button variant="contained" color="primary" component="span" onClick={() => fivem()}>Launch the game</Button>
-            <Typography>
+            <Divider variant="top" className={classes.bigBootyBitches}/>
+            <p className={classes.text}>
                 {props.ip ? props.ip : null} is now whitelisted until the
                 Linux Box restarts!
-            </Typography>
-            <Typography variant='h4'>
-                If you do not see your IP - Please turn your ad blocker off.
-            </Typography>
+            </p>
 
         </Container>
     );
