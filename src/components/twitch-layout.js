@@ -6,16 +6,19 @@ import {
     Divider,
 } from "@material-ui/core";
 import Streamers from "./streamers";
+import "./Layout.scss"
 
 const useStyles = makeStyles((theme) => ({
     titleStretch: {
         maxWidth: "100vw",
-        backgroundColor: "#333333",
+        maxHeight: "5vw",
+        paddingLeft: 0,
+        backgroundColor: "var(--primary)",
     },
     body: {
         display: "block",
         padding: "20px",
-        color: "F2F2F2",
+        color: "var(--primary)",
     },
     toolBarItems: {
         color:"#E3E3E3",

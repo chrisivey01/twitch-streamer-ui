@@ -7,9 +7,12 @@ import {
     CardContent,
     CircularProgress,
 } from "@material-ui/core";
+import "./Layout.scss"
+
 
 const useStyles = makeStyles((theme) => ({
     image: {
+        // width: "20vh",
         height: "20vh",
         paddingLeft: "20px",
         paddingRight: "20px",
@@ -26,15 +29,19 @@ const useStyles = makeStyles((theme) => ({
     },
     ul: {
         listStyle: "none",
-        fontSize: 10,
+        fontSize: 14,
         paddingLeft: "2vh",
         paddingTop: 0,
     },
     darkFont: {
         fontWeight: "bold",
+        fontSize: "12px",
     },
     streamerSections:{
-        margin: "20px"
+        margin: "20px",
+        width: "1200px",
+        backgroundColor: "var(--secondary)",
+        color: "var(--text)"
     }
 }));
 

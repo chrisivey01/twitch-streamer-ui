@@ -8,11 +8,12 @@ import {
     Toolbar,
     AppBar,
 } from "@material-ui/core";
+import "./Layout.scss"
 
 const useStyles = makeStyles((theme) => ({
     buttons: {
         display: "flex",
-        color: "#E3E3E3",
+        color: "var(--text)",
         flexDirection: "column",
         alignItems: "center",
         "& > *": {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleStretch: {
         maxWidth: "100vw",
-        backgroundColor: "#333333",
+        backgroundColor: "var(--primary)",
     },
     toolBarItems: {
         margin: "0 25px 0px 10px",
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonGroup: {
         "& .MuiButton-root":{
-            color:"#E3E3E3"
+        color: "var(--text)",
         }
     }
 }));

@@ -1,0 +1,25 @@
+// Root Styles
+:root {
+    --primary: #333333;
+    --secondary: #333333;
+    --tertiary: #333333;
+    --accent: #8ed5de;
+    --text: #ffffff;
+    --opacity: .3;
+    --gradiant-one: rgba(92, 92, 92, .8);
+    --gradiant-two: rgba(51, 51, 51, .1);
+}
+
+// Dark Mode Colors
+[data-theme="dark"] {
+    --primary: #f2f2f2;
+    --secondary: white;
+    --tertiary: #8ed5de;
+    --accent: #157a92;
+    --text: #363537;
+    --opacity: .5;
+    --scale: 1;
+    --scale-two: 1;
+    --gradiant-one: rgba(21,122,146, 1);
+    --gradiant-two: rgba(142,213,222,.1);
+}
