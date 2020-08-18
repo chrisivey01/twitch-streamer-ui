@@ -36,7 +36,7 @@ const Whitelist = (props) => {
     return (
         <Container fixed>
             <AdBlockDetect>
-                <p className={classes.text}>Hey! You have your adblocker turned on! If you don't see your IP you need to turn it off.</p>
+                <p className={classes.text}>Hey! You have your adblocker turned on. If you don't see your IP you need to turn it off.</p>
             </AdBlockDetect>
             <p></p>
             <Button variant="contained" color="primary" component="span" onClick={() => fivem()}>Launch the game</Button>

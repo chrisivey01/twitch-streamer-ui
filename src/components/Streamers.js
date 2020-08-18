@@ -12,7 +12,6 @@ import "./Layout.scss"
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        // width: "20vh",
         height: "20vh",
         paddingLeft: "20px",
         paddingRight: "20px",
