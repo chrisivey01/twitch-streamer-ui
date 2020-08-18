@@ -20,16 +20,6 @@ const App = () => {
         }, []);
     });
 
-    const [theme, setTheme] = useState("light");
-
-    const toggleTheme = () => {
-        if (document.documentElement.getAttribute("data-theme") == "dark") {
-            document.documentElement.setAttribute("data-theme", "light");
-        } else {
-            document.documentElement.setAttribute("data-theme", "dark");
-        }
-    };
-
     const useStyle = makeStyles((theme) => ({
         background: {
             backgroundColor: "var(--primary)",

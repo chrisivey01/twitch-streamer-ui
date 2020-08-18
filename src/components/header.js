@@ -7,8 +7,9 @@ import {
     ButtonGroup,
     Toolbar,
     AppBar,
+    Switch,
 } from "@material-ui/core";
-import "./Layout.scss"
+import "./Layout.scss";
 
 const useStyles = makeStyles((theme) => ({
     buttons: {
@@ -39,8 +40,27 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "1vw",
         fontFamily: "Corbel",
         }
+    },
+    switch: {
+        position: "fixed",
+        marginTop: "2.5vh",
+        left: "193vh",
+    },
+    buttonText: {
+        position: "fixed",
+        color: "var(--text)",
+        marginTop: "4vh",
+        left: "180vh",
     }
 }));
+
+const toggleTheme = () => {
+    if (document.documentElement.getAttribute("data-theme") == "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+    }
+};
 
 const Header = () => {
     const classes = useStyles();
@@ -57,6 +77,8 @@ const Header = () => {
                     <Button component={Link} to="/whitelist">Whitelist</Button>
                 </ButtonGroup>
             </Toolbar>
+            <p className={classes.buttonText}>Light Mode</p>
+            <Switch className={classes.switch} onChange={toggleTheme}>Toggle Light Theme</Switch>
         </AppBar>
     );
 };
