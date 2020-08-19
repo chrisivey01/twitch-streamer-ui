@@ -21,12 +21,9 @@ const useStyles = makeStyles((theme) => ({
         color: "var(--primary)",
     },
     toolBarItems: {
-        color:"#E3E3E3",
+        color:"var(--primary)",
         margin:"0 25px 0px 10px",
         height:"inherit"
-    },
-    divider:{
-        backgroundColor:"#E3E3E3"
     },
     bigBootyBitches: {
         backgroundColor: "transparent",
