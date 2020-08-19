@@ -68,7 +68,7 @@ const Header = () => {
     return (
         <AppBar className={classes.titleStretch} position="static">
             <Toolbar>
-                <Typography className={classes.toolBarItems}>PMA-RP</Typography>
+                <Button className={classes.toolBarItems}>PMA-RP</Button>
                 <ButtonGroup
                     className={classes.buttonGroup}
                     aria-label="outlined primary button group"
