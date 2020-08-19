@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "0 25px 0px 10px",
         variant: "fullWidth",
         fontFamily: "Corbel",
-        fontSize: "2vw",
+        fontSize: "1.8vw",
         textAlign: "center",
         color: "var(--text)",
         paddingLeft: 0,
@@ -37,20 +37,21 @@ const useStyles = makeStyles((theme) => ({
     buttonGroup: {
         "& .MuiButton-root":{
         color: "var(--text)",
-        fontSize: "1vw",
+        fontSize: "0.8vw",
         fontFamily: "Corbel",
         }
     },
     switch: {
         position: "fixed",
-        marginTop: "2.5vh",
-        left: "193vh",
+        marginTop: "1.5vh",
+        left: "97vw",
     },
     buttonText: {
         position: "fixed",
         color: "var(--text)",
-        marginTop: "4vh",
-        left: "180vh",
+        marginTop: "2vh",
+        left: "93vw",
+        fontSize: "0.8vw",
     }
 }));
 

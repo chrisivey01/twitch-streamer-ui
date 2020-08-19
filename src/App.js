@@ -23,7 +23,8 @@ const App = () => {
     const useStyle = makeStyles((theme) => ({
         background: {
             backgroundColor: "var(--primary)",
-            height: "100vh"
+            height: "100vh",
+            width: "100vw",
         }
     }))
 
