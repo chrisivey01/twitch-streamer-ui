@@ -7,12 +7,14 @@ import {
     ButtonGroup,
     Toolbar,
     AppBar,
+    Switch,
 } from "@material-ui/core";
+import "./Layout.scss";
 
 const useStyles = makeStyles((theme) => ({
     buttons: {
         display: "flex",
-        color: "#E3E3E3",
+        color: "var(--text)",
         flexDirection: "column",
         alignItems: "center",
         "& > *": {
@@ -21,18 +23,45 @@ const useStyles = makeStyles((theme) => ({
     },
     titleStretch: {
         maxWidth: "100vw",
-        backgroundColor: "#333333",
+        backgroundColor: "var(--primary)",
     },
     toolBarItems: {
         margin: "0 25px 0px 10px",
         variant: "fullWidth",
+        fontFamily: "Corbel",
+        fontSize: "1.8vw",
+        textAlign: "center",
+        color: "var(--text)",
+        paddingLeft: 0,
     },
     buttonGroup: {
         "& .MuiButton-root":{
-            color:"#E3E3E3"
+        color: "var(--text)",
+        fontSize: "0.8vw",
+        fontFamily: "Corbel",
         }
+    },
+    switch: {
+        position: "fixed",
+        marginTop: "1.5vh",
+        left: "97vw",
+    },
+    buttonText: {
+        position: "fixed",
+        color: "var(--text)",
+        marginTop: "2vh",
+        left: "93vw",
+        fontSize: "0.8vw",
     }
 }));
+
+const toggleTheme = () => {
+    if (document.documentElement.getAttribute("data-theme") == "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+    }
+};
 
 const Header = () => {
     const classes = useStyles();
@@ -49,6 +78,8 @@ const Header = () => {
                     <Button component={Link} to="/whitelist">Whitelist</Button>
                 </ButtonGroup>
             </Toolbar>
+            <p className={classes.buttonText}>Light Mode</p>
+            <Switch className={classes.switch} onChange={toggleTheme}>Toggle Light Theme</Switch>
         </AppBar>
     );
 };

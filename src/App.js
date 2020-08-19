@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import * as Apis from "./api/api";
 import { useDispatch } from "react-redux";
 import { getTwitchStreamers } from "./store/actions/twitch.actions";
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import TwitchLayout from "./components/twitch-layout";
 import Whitelist from "./components/whitelist";
 import Header from "./components/Header";
+
+import "../src/components/Layout.scss";
+import { makeStyles } from "@material-ui/core";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -17,8 +20,18 @@ const App = () => {
         }, []);
     });
 
+    const useStyle = makeStyles((theme) => ({
+        background: {
+            backgroundColor: "var(--primary)",
+            height: "100vh",
+            width: "100vw",
+        }
+    }))
+
+    const classes = useStyle();
+
     return (
-        <div>
+        <div className={classes.background}>
             <Header />
             <Switch>
                 <Route exact path="/" component={TwitchLayout} />
