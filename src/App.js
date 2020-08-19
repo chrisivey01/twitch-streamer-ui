@@ -10,6 +10,7 @@ import Header from "./components/Header";
 
 import "../src/components/Layout.scss";
 import { makeStyles } from "@material-ui/core";
+import main from "./components/main";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const App = () => {
         <div className={classes.background}>
             <Header />
             <Switch>
-                {/* <Route exact path="/" component={main} /> */}
+                <Route exact path="/" component={main} />
                 <Route path="/streams" component={TwitchLayout} />
                 <Route path="/whitelist" component={Whitelist} />
             </Switch>

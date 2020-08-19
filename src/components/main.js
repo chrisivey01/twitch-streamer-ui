@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 const main = (props) => {
     const classes = useStyles();
     return (
-       <p className={classes.hi}>Hi</p>
+       <p className={classes.hi}>Welcome to PMA RP!</p>
     );
 };
 
