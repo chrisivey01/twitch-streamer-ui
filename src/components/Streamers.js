@@ -121,7 +121,7 @@ const Streamers = (props) => {
                             );
                         })
                     ) : (
-                        <CircularProgress color="secondary" thickness={6.0} />
+                        <CircularProgress color="secondary" thickness={6.5} />
                     )}
                 </CardContent>
             </Card>
