@@ -68,12 +68,12 @@ const Header = () => {
     return (
         <AppBar className={classes.titleStretch} position="static">
             <Toolbar>
-                <Button className={classes.toolBarItems}>PMA-RP</Button>
+                <Button className={classes.toolBarItems} component={Link} to="/">PMA-RP</Button>
                 <ButtonGroup
                     className={classes.buttonGroup}
                     aria-label="outlined primary button group"
                 >
-                    <Button component={Link} to="/">Streams</Button>
+                    <Button component={Link} to="/streams">Streams</Button>
                     <Button component={Link} to="/whitelist">Whitelist</Button>
                 </ButtonGroup>
             </Toolbar>

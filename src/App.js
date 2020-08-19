@@ -33,7 +33,8 @@ const App = () => {
         <div className={classes.background}>
             <Header />
             <Switch>
-                <Route exact path="/" component={TwitchLayout} />
+                {/* <Route exact path="/" component={main} /> */}
+                <Route path="/streams" component={TwitchLayout} />
                 <Route path="/whitelist" component={Whitelist} />
             </Switch>
         </div>

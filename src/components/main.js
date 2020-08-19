@@ -6,18 +6,19 @@ import "./Layout.scss"
 const useStyles = makeStyles((theme) => ({
     hi: {
         color: "brown",
+        fontSize: "22px"
     }
 }));
 
 const main = (props) => {
     const classes = useStyles();
     return (
-       <p>Hi</p>
+       <p className={classes.hi}>Hi</p>
     );
 };
 
 const mapStateToProps = (state) => {
-    return { selectors: main };
+    return { main };
 };
 
 export default connect(mapStateToProps)(main);
