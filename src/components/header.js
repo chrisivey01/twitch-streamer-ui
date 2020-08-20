@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
 import {
@@ -8,8 +8,14 @@ import {
     Toolbar,
     AppBar,
     Switch,
+    IconButton,
+    MenuItem,
+    MenuList,
+    Paper,
 } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 import "./Layout.scss";
+import App from "../App";
 
 const useStyles = makeStyles((theme) => ({
     buttons: {
@@ -51,6 +57,24 @@ const useStyles = makeStyles((theme) => ({
         color: "var(--text)",
         marginTop: "4vh",
         left: "180vh",
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+      },
+    paper: {
+        marginRight: theme.spacing(2),
+    },
+    hide: {
+        display: "none"
+    },
+    show: {
+        display: "auto"
+    },
+    menuLayout: {
+        color: "var(--primary)",
+    },
+    menuFont: {
+        color: "var(--primary)",
     }
 }));
 
@@ -62,25 +86,49 @@ const toggleTheme = () => {
     }
 };
 
+
 const Header = () => {
     const classes = useStyles();
 
+    const buttonHandler = () => {
+        setOpen(true)
+    }
+
+    const buttonClose = () => {
+        setOpen(false)
+    }
+
+    const buttonClose2 = () => {
+        setOpen(false)
+    }
+
+    const buttonClose3 = () => {
+        setOpen(false)
+    }
+
+    const [open,setOpen] = useState(false)
     return (
-        <AppBar className={classes.titleStretch} position="static">
-            <Toolbar>
-                <Button className={classes.toolBarItems} component={Link} to="/">PMA-RP</Button>
-                <ButtonGroup
-                    className={classes.buttonGroup}
-                    aria-label="outlined primary button group"
-                >
-                    <Button component={Link} to="/streams">Streams</Button>
-                    <Button component={Link} to="/whitelist">Whitelist</Button>
-                </ButtonGroup>
+        <AppBar className={classes.titleStretch} position= "static">
+            <Toolbar variant ="dense">
+            <IconButton className={open == true ? classes.hide : classes.show} onClick={buttonHandler} edge="start" color="inherit" aria-label="menu">
+                <MenuIcon />
+            </IconButton>
+            <Paper className={classes.paper}>
+                <div className={classes.menuLayout}>
+            <MenuList className={open == true ? classes.show : classes.hide}>
+                <div className={classes.menuFont}>
+                <MenuItem onClick={buttonClose}>Home</MenuItem>
+                <MenuItem onClick={buttonClose2}>Streamers</MenuItem>
+                <MenuItem onClick={buttonClose3}>Whitelist</MenuItem>
+                </div>
+            </MenuList>
+            </div>
+            </Paper>
+            <Typography variant="h4" color="inherit">
+            PMA-RP
+          </Typography>
             </Toolbar>
-            <p className={classes.buttonText}>Light Mode</p>
-            <Switch className={classes.switch} onChange={toggleTheme}>Toggle Light Theme</Switch>
         </AppBar>
     );
-};
-
+}
 export default Header;
