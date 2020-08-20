@@ -12,6 +12,7 @@ import {
     MenuItem,
     MenuList,
     Paper,
+    ClickAwayListener,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./Layout.scss";
@@ -98,16 +99,10 @@ const Header = () => {
         setOpen(false)
     }
 
-    const buttonClose2 = () => {
-        setOpen(false)
-    }
-
-    const buttonClose3 = () => {
-        setOpen(false)
-    }
-
     const [open,setOpen] = useState(false)
+
     return (
+        <ClickAwayListener onClickAway={buttonClose}>
         <AppBar className={classes.titleStretch} position= "static">
             <Toolbar variant ="dense">
             <IconButton className={open == true ? classes.hide : classes.show} onClick={buttonHandler} edge="start" color="inherit" aria-label="menu">
@@ -118,8 +113,10 @@ const Header = () => {
             <MenuList className={open == true ? classes.show : classes.hide}>
                 <div className={classes.menuFont}>
                 <MenuItem onClick={buttonClose} component={Link} to="/">Home</MenuItem>
-                <MenuItem onClick={buttonClose2} component={Link} to="streams">Streamers</MenuItem>
-                <MenuItem onClick={buttonClose3} component={Link} to="whitelist">Whitelist</MenuItem>
+                <MenuItem onClick={buttonClose} component={Link} to="streams">Streamers</MenuItem>
+                <MenuItem onClick={buttonClose} component={Link} to="whitelist">Whitelist</MenuItem>
+                <MenuItem onClick={buttonClose} component={Link} to="discord">Discord</MenuItem>
+
                 </div>
             </MenuList>
             </div>
@@ -129,6 +126,7 @@ const Header = () => {
           </Typography>
             </Toolbar>
         </AppBar>
+        </ClickAwayListener>
     );
 }
 export default Header;

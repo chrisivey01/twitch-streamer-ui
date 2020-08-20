@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import "../src/components/Layout.scss";
 import { makeStyles } from "@material-ui/core";
 import main from "./components/main";
+import discord from "./components/discord"
 
 const App = () => {
     const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const App = () => {
                 <Route exact path="/" component={main} />
                 <Route path="/streams" component={TwitchLayout} />
                 <Route path="/whitelist" component={Whitelist} />
+                <Route path="/discord" component={discord} />
             </Switch>
         </div>
     );
