@@ -117,9 +117,9 @@ const Header = () => {
                 <div className={classes.menuLayout}>
             <MenuList className={open == true ? classes.show : classes.hide}>
                 <div className={classes.menuFont}>
-                <MenuItem onClick={buttonClose}>Home</MenuItem>
-                <MenuItem onClick={buttonClose2}>Streamers</MenuItem>
-                <MenuItem onClick={buttonClose3}>Whitelist</MenuItem>
+                <MenuItem onClick={buttonClose} component={Link} to="/">Home</MenuItem>
+                <MenuItem onClick={buttonClose2} component={Link} to="streams">Streamers</MenuItem>
+                <MenuItem onClick={buttonClose3} component={Link} to="whitelist">Whitelist</MenuItem>
                 </div>
             </MenuList>
             </div>
