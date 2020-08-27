@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
     return { discord };
 };
 
-export default connect(mapStateToProps)(discord);
+export default connect(discord);
