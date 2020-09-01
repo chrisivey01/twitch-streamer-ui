@@ -11,8 +11,8 @@ import {
     IconButton,
     MenuItem,
     MenuList,
-    Paper,
-    ClickAwayListener,
+    Divider,
+    Drawer,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./Layout.scss";
@@ -71,12 +71,6 @@ const useStyles = makeStyles((theme) => ({
     show: {
         display: "auto"
     },
-    menuLayout: {
-        color: "var(--primary)",
-    },
-    menuFont: {
-        color: "var(--primary)",
-    }
 }));
 
 const toggleTheme = () => {
@@ -91,42 +85,12 @@ const toggleTheme = () => {
 const Header = () => {
     const classes = useStyles();
 
-    const buttonHandler = () => {
-        setOpen(true)
-    }
-
-    const buttonClose = () => {
-        setOpen(false)
-    }
-
-    const [open,setOpen] = useState(false)
-
     return (
-        <ClickAwayListener onClickAway={buttonClose}>
-        <AppBar className={classes.titleStretch} position= "static">
-            <Toolbar variant ="dense">
-            <IconButton className={open == true ? classes.hide : classes.show} onClick={buttonHandler} edge="start" color="inherit" aria-label="menu">
-                <MenuIcon />
-            </IconButton>
-            <Paper className={classes.paper}>
-                <div className={classes.menuLayout}>
-            <MenuList className={open == true ? classes.show : classes.hide}>
-                <div className={classes.menuFont}>
-                <MenuItem onClick={buttonClose} component={Link} to="/">Home</MenuItem>
-                <MenuItem onClick={buttonClose} component={Link} to="streams">Streamers</MenuItem>
-                <MenuItem onClick={buttonClose} component={Link} to="whitelist">Whitelist</MenuItem>
-                <MenuItem onClick={buttonClose} component={Link} to="discord">Discord</MenuItem>
-
-                </div>
-            </MenuList>
-            </div>
-            </Paper>
-            <Typography variant="h4" color="inherit">
-            PMA-RP
-          </Typography>
+        <AppBar>
+            <Toolbar>
+                
             </Toolbar>
         </AppBar>
-        </ClickAwayListener>
     );
 }
 export default Header;
