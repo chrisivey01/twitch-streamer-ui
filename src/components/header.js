@@ -55,14 +55,15 @@ const useStyles = makeStyles((theme) => ({
     },
     switch: {
         position: "fixed",
-        marginTop: "2.5vh",
-        left: "193vh",
+        marginTop: "1.7vh",
+        left: "185vh",
     },
     buttonText: {
         position: "fixed",
         color: "var(--text)",
-        marginTop: "4vh",
-        left: "180vh",
+        marginTop: "2vh",
+        left: "177vh",
+        fontSize: "1.5vh",
     },
     menuButton: {
         marginRight: theme.spacing(2),
