@@ -87,8 +87,8 @@ const Header = () => {
 
     return (
         <AppBar>
-            <Toolbar>
-                
+            <Toolbar className={classes.toolBarItems}>
+                <Typography className={classes.toolBarItems}>PMA-RP</Typography>
             </Toolbar>
         </AppBar>
     );
