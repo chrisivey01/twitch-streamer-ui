@@ -56,13 +56,13 @@ const useStyles = makeStyles((theme) => ({
     switch: {
         position: "fixed",
         marginTop: "1.7vh",
-        left: "185vh",
+        left: "186vh",
     },
     buttonText: {
         position: "fixed",
         color: "var(--text)",
         marginTop: "2vh",
-        left: "177vh",
+        left: "178vh",
         fontSize: "1.5vh",
     },
     menuButton: {
@@ -94,9 +94,11 @@ const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+        backgroundColor: "var(--text)",
       },
     drawerPaper: {
         width: drawerWidth,
+        backgroundColor: "var(--text)",
       },
     drawerHeader: {
         display: 'flex',
@@ -105,6 +107,7 @@ const useStyles = makeStyles((theme) => ({
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
+        backgroundColor: "var(--text)",
       },
     content: {
         flexGrow: 1,
@@ -126,6 +129,15 @@ const useStyles = makeStyles((theme) => ({
         color: "var(--primary)",
         fontSize: "1vw",
         fontFamily: "Corbel",
+    },
+    iconcolor: {
+        color: "var(--text)",
+    },
+    chevroncolor: {
+        color: "var(--primary)",
+    },
+    divcolor: {
+        backgroundColor: "var(--tertiary)",
     }
 }));
 
@@ -167,7 +179,7 @@ const Header = () => {
               edge="start"
               className={clsx(classes.menuButton, open && classes.hide)}
             >
-              <MenuIcon />
+              <MenuIcon className={classes.iconcolor}/>
             </IconButton>
             <Typography className={classes.toolBarItems}>PMA-RP</Typography>
 
@@ -186,15 +198,15 @@ const Header = () => {
         >
           <div className={classes.drawerHeader}>
             <IconButton onClick={handleDrawerClose}>
-              {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+              {theme.direction === 'ltr' ? <ChevronLeftIcon className={classes.chevroncolor} /> : <ChevronRightIcon />}
             </IconButton>
           </div>
-          <Divider />
+          <Divider className={classes.divcolor} />
           {/* <MenuItem className={classes.drawerItems} component={Link} to="/">Home</MenuItem> */}
           <MenuItem className={classes.drawerItems} component={Link} to="/">Streamers</MenuItem>
           <MenuItem className={classes.drawerItems} component={Link} to="whitelist">Whitelist</MenuItem>
           {/* <MenuItem className={classes.drawerItems} component={Link} to="discord">Discord</MenuItem> */}
-          <Divider />
+          <Divider className={classes.divcolor} />
         </Drawer>
       </div>
     )
