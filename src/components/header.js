@@ -125,6 +125,11 @@ const useStyles = makeStyles((theme) => ({
         }),
         marginLeft: 0,
       },
+    drawerItems: {
+        color: "var(--primary)",
+        fontSize: "1vw",
+        fontFamily: "Corbel",
+    }
 }));
 
 const toggleTheme = () => {
@@ -185,13 +190,11 @@ const Header = () => {
             </IconButton>
           </div>
           <Divider />
-          <MenuItem>Home</MenuItem>
+          <MenuItem className={classes.drawerItems} component={Link} to="/">Home</MenuItem>
+          <MenuItem className={classes.drawerItems} component={Link} to="streams">Streamers</MenuItem>
+          <MenuItem className={classes.drawerItems} component={Link} to="whitelist">Whitelist</MenuItem>
+          <MenuItem className={classes.drawerItems} component={Link} to="discord">Discord</MenuItem>
           <Divider />
-          <MenuItem>Streamers</MenuItem>
-          <Divider />
-          <MenuItem>Whitelist</MenuItem>
-          <Divider />
-          <MenuItem>Discord</MenuItem>
         </Drawer>
       </div>
     );
