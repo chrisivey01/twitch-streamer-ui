@@ -13,6 +13,7 @@ import {
     Drawer,
     IconButton,
     Divider,
+    MenuItem,
     
 } from "@material-ui/core";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -188,10 +189,10 @@ const Header = () => {
             </IconButton>
           </div>
           <Divider />
-          <MenuItem className={classes.drawerItems} component={Link} to="/">Home</MenuItem>
-          <MenuItem className={classes.drawerItems} component={Link} to="streams">Streamers</MenuItem>
+          {/* <MenuItem className={classes.drawerItems} component={Link} to="/">Home</MenuItem> */}
+          <MenuItem className={classes.drawerItems} component={Link} to="/">Streamers</MenuItem>
           <MenuItem className={classes.drawerItems} component={Link} to="whitelist">Whitelist</MenuItem>
-          <MenuItem className={classes.drawerItems} component={Link} to="discord">Discord</MenuItem>
+          {/* <MenuItem className={classes.drawerItems} component={Link} to="discord">Discord</MenuItem> */}
           <Divider />
         </Drawer>
       </div>
