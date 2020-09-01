@@ -185,6 +185,13 @@ const Header = () => {
             </IconButton>
           </div>
           <Divider />
+          <MenuItem>Home</MenuItem>
+          <Divider />
+          <MenuItem>Streamers</MenuItem>
+          <Divider />
+          <MenuItem>Whitelist</MenuItem>
+          <Divider />
+          <MenuItem>Discord</MenuItem>
         </Drawer>
       </div>
     );
