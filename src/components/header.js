@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "0 25px 0px 10px",
         variant: "fullWidth",
         fontFamily: "Corbel",
-        fontSize: "1.8vw",
+        fontSize: "2vw",
         textAlign: "center",
         color: "var(--text)",
         paddingLeft: 0,
@@ -48,32 +48,37 @@ const useStyles = makeStyles((theme) => ({
     buttonGroup: {
         "& .MuiButton-root":{
         color: "var(--text)",
-        fontSize: "0.8vw",
+        fontSize: "1vw",
         fontFamily: "Corbel",
         }
     },
     switch: {
         position: "fixed",
-        marginTop: "1.5vh",
-        left: "97vw",
+        marginTop: "2.5vh",
+        left: "193vh",
     },
     buttonText: {
         position: "fixed",
         color: "var(--text)",
-        marginTop: "2vh",
-        left: "93vw",
-        fontSize: "0.8vw",
+        marginTop: "4vh",
+        left: "180vh",
     },
-    root: {
-        display: 'flex',
+    menuButton: {
+        marginRight: theme.spacing(2),
       },
-      appBar: {
+    paper: {
+        marginRight: theme.spacing(2),
+    },
+    show: {
+        display: "auto"
+    },
+    appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
         }),
       },
-      appBarShift: {
+    appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
         marginLeft: drawerWidth,
         transition: theme.transitions.create(['margin', 'width'], {
@@ -81,20 +86,17 @@ const useStyles = makeStyles((theme) => ({
           duration: theme.transitions.duration.enteringScreen,
         }),
       },
-      menuButton: {
-        marginRight: theme.spacing(2),
-      },
-      hide: {
+    hide: {
         display: 'none',
       },
-      drawer: {
+    drawer: {
         width: drawerWidth,
         flexShrink: 0,
       },
-      drawerPaper: {
+    drawerPaper: {
         width: drawerWidth,
       },
-      drawerHeader: {
+    drawerHeader: {
         display: 'flex',
         alignItems: 'center',
         padding: theme.spacing(0, 1),
@@ -102,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
       },
-      content: {
+    content: {
         flexGrow: 1,
         padding: theme.spacing(3),
         transition: theme.transitions.create('margin', {
@@ -111,13 +113,18 @@ const useStyles = makeStyles((theme) => ({
         }),
         marginLeft: -drawerWidth,
       },
-      contentShift: {
+    contentShift: {
         transition: theme.transitions.create('margin', {
           easing: theme.transitions.easing.easeOut,
           duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
       },
+    drawerItems: {
+        color: "var(--primary)",
+        fontSize: "1vw",
+        fontFamily: "Corbel",
+    }
 }));
 
 const toggleTheme = () => {
