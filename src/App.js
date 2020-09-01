@@ -34,6 +34,8 @@ const App = () => {
     return (
         <div className={classes.background}>
             <Header />
+            <p>.</p>
+            <p>.</p>
             <Switch>
                 <Route exact path="/" component={main} />
                 <Route path="/streams" component={TwitchLayout} />
