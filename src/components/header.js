@@ -203,8 +203,8 @@ const Header = () => {
           </div>
           <Divider className={classes.divcolor} />
           {/* <MenuItem className={classes.drawerItems} component={Link} to="/">Home</MenuItem> */}
-          <MenuItem className={classes.drawerItems} component={Link} to="/">Streamers</MenuItem>
-          <MenuItem className={classes.drawerItems} component={Link} to="whitelist">Whitelist</MenuItem>
+          <MenuItem className={classes.drawerItems} onClick={handleDrawerClose} component={Link} to="/">Streamers</MenuItem>
+          <MenuItem className={classes.drawerItems} onClick={handleDrawerClose} component={Link} to="whitelist">Whitelist</MenuItem>
           {/* <MenuItem className={classes.drawerItems} component={Link} to="discord">Discord</MenuItem> */}
           <Divider className={classes.divcolor} />
         </Drawer>
