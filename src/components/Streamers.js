@@ -31,10 +31,12 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 14,
         paddingLeft: "2vh",
         paddingTop: 0,
+        color: "var(--text)",
     },
     darkFont: {
         fontWeight: "bold",
         fontSize: "12px",
+        color: "var(--text)",
     },
     streamerSections:{
         margin: "20px",

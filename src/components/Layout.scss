@@ -2,7 +2,7 @@
 :root {
     --primary: #333333;
     --secondary: #333333;
-    --tertiary: #333333;
+    --tertiary: #c0c0c0;
     --accent: #8ed5de;
     --text: #ffffff;
     --opacity: .3;
@@ -14,7 +14,7 @@
 [data-theme="dark"] {
     --primary: #f2f2f2;
     --secondary: white;
-    --tertiary: #8ed5de;
+    --tertiary: rgb(196, 195, 195);
     --accent: #157a92;
     --text: #363537;
     --opacity: .5;

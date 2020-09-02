@@ -23,7 +23,7 @@ const App = () => {
     const useStyle = makeStyles((theme) => ({
         background: {
             backgroundColor: "var(--primary)",
-            height: "100vh",
+            height: "98.91vh",
             width: "100vw",
         }
     }))
@@ -33,6 +33,8 @@ const App = () => {
     return (
         <div className={classes.background}>
             <Header />
+            <p>.</p>
+            <p>.</p>
             <Switch>
                 <Route exact path="/" component={TwitchLayout} />
                 <Route path="/whitelist" component={Whitelist} />
