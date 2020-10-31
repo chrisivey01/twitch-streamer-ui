@@ -16,6 +16,5 @@ module.exports = merge(common, {
             template:"src/index.html",
         })
     ],
-    devtool: "inline-source-map",
-
+    devtool: "eval-source-map",
 })

@@ -17,6 +17,4 @@ module.exports = merge(common, {
         historyApiFallback: true,
         hot: true
      },
-    devtool: "source-map"
-
 })
