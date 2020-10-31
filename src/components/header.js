@@ -1,14 +1,11 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Link } from 'react-router-dom';
 import {
-    Typography,
-    Button,
+    AppBar, Button,
     ButtonGroup,
-    Toolbar,
-    AppBar,
-    Switch,
+    Toolbar, Typography
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import { Link } from 'react-router-dom';
 import "./Layout.scss";
 
 const useStyles = makeStyles((theme) => ({
@@ -78,8 +75,6 @@ const Header = () => {
                     <Button component={Link} to="/whitelist">Whitelist</Button>
                 </ButtonGroup>
             </Toolbar>
-            <p className={classes.buttonText}>Light Mode</p>
-            <Switch className={classes.switch} onChange={toggleTheme}>Toggle Light Theme</Switch>
         </AppBar>
     );
 };

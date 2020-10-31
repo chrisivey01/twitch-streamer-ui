@@ -25,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
         margin:"0 25px 0px 10px",
         height:"inherit"
     },
-    bigBootyBitches: {
-        backgroundColor: "transparent",
-    },
 }));
 
 const TwitchLayout = (props) => {
@@ -40,7 +37,7 @@ const TwitchLayout = (props) => {
                     data={props.streamers}
                     featured={true}
                 />
-                <Divider variant="middle" className={classes.bigBootyBitches} />
+                <Divider variant="middle" />
                 <Streamers
                     title={"Streamers"}
                     data={props.streamers}

@@ -37,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "12px",
     },
     streamerSections:{
-        margin: "20px",
         backgroundColor: "var(--secondary)",
-        color: "var(--text)"
+        color: "var(--text)",
+        margin:15
     }
 }));
 
