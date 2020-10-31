@@ -24,7 +24,6 @@ const App = () => {
         background: {
             backgroundColor: "var(--primary)",
             height: "100vh",
-            width: "100vw",
         }
     }))
 
