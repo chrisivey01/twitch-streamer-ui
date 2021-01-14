@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
     Card,
     CardContent, CardHeader,
@@ -7,18 +6,6 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import "./Layout.scss";
-=======
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-    Typography,
-    Card,
-    CardHeader,
-    CardContent,
-    CircularProgress,
-} from "@material-ui/core";
-import "./Layout.scss"
->>>>>>> 951b1d7bb1bf8d2efa2d2d16c77da6e1ecf43441
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,13 +21,8 @@ const useStyles = makeStyles((theme) => ({
     },
     cardContent: {
         display: "flex",
-<<<<<<< HEAD
         justifyContent: "space-around",
         flexWrap: "wrap"
-=======
-        justifyContent:"space-around",
-        flexWrap:"wrap"
->>>>>>> 951b1d7bb1bf8d2efa2d2d16c77da6e1ecf43441
     },
     ul: {
         listStyle: "none",
@@ -52,17 +34,10 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "bold",
         fontSize: "12px",
     },
-<<<<<<< HEAD
     streamerSections: {
         backgroundColor: "var(--secondary)",
         color: "var(--text)",
         margin: 15
-=======
-    streamerSections:{
-        backgroundColor: "var(--secondary)",
-        color: "var(--text)",
-        margin:15
->>>>>>> 951b1d7bb1bf8d2efa2d2d16c77da6e1ecf43441
     }
 }));
 
@@ -144,13 +119,8 @@ const Streamers = (props) => {
                             );
                         })
                     ) : (
-<<<<<<< HEAD
                             <CircularProgress color="secondary" thickness={6.5} />
                         )}
-=======
-                        <CircularProgress color="secondary" thickness={6.5} />
-                    )}
->>>>>>> 951b1d7bb1bf8d2efa2d2d16c77da6e1ecf43441
                 </CardContent>
             </Card>
         </React.Fragment>

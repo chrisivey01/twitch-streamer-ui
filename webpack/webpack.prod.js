@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -34,25 +33,3 @@ module.exports = merge(common, {
     },
     devtool: "eval-source-map",
 });
-=======
-const merge = require("webpack-merge");
-const common = require("./webpack.common");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-module.exports = merge(common, {
-    mode:"production",
-    entry:"./src/index.js",
-    output: {
-        // path: "dist",
-        filename:"index.js"
-    },
-    plugins:[
-        new HtmlWebpackPlugin({
-            inject: true,
-            template:"src/index.html",
-        })
-    ],
-    devtool: "eval-source-map",
-})
->>>>>>> 951b1d7bb1bf8d2efa2d2d16c77da6e1ecf43441

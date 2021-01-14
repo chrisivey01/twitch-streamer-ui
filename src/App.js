@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { makeStyles } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -11,20 +10,6 @@ import Whitelist from "./components/Whitelist";
 import { getTwitchStreamers } from "./store/actions/twitch.actions";
 
 
-=======
-import React, { useState, useEffect } from "react";
-import * as Apis from "./api/api";
-import { useDispatch } from "react-redux";
-import { getTwitchStreamers } from "./store/actions/twitch.actions";
-import { Switch, Route, Redirect } from "react-router-dom";
-
-import TwitchLayout from "./components/twitch-layout";
-import Whitelist from "./components/whitelist";
-import Header from "./components/Header";
-
-import "../src/components/Layout.scss";
-import { makeStyles } from "@material-ui/core";
->>>>>>> 951b1d7bb1bf8d2efa2d2d16c77da6e1ecf43441
 
 const App = () => {
     const dispatch = useDispatch();
