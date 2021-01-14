@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: 0,
     },
     buttonGroup: {
-        "& .MuiButton-root":{
-        color: "var(--text)",
-        fontSize: "0.8vw",
-        fontFamily: "Corbel",
+        "& .MuiButton-root": {
+            color: "var(--text)",
+            fontSize: "0.8vw",
+            fontFamily: "Corbel",
         }
     },
     switch: {

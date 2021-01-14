@@ -1,7 +1,8 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 const CopyPlugin = require("copy-webpack-plugin");
-const paths = require('./paths')
+const paths = require('./paths');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
     mode: "production",
@@ -9,14 +10,17 @@ module.exports = merge(common, {
         filename: "[name].js",
         path: paths.build
     },
-    // plugins: [
-    //     new CopyPlugin({
-    //         patterns: [
-    //             { from: "src/assets", to: "assets" },
-    //             { from: "public/html", to: "html" },
-    //         ],
-    //     }),
-    // ],
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: "public/index.html", to: "index.html" },
+            ],
+        }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: "public/index.html",
+        })
+    ],
     optimization: {
         minimize: true,
         // Once your build outputs multiple chunks, this option will ensure they share the webpack runtime
@@ -31,5 +35,4 @@ module.exports = merge(common, {
         maxEntrypointSize: 512000,
         maxAssetSize: 512000,
     },
-    devtool: "eval-source-map",
 });
