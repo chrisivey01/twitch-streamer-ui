@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { connect } from "react-redux";
 import "./Layout.scss";
-import Streamers from "./streamers";
+import Streamers from "./Streamers";
 
 const useStyles = makeStyles((theme) => ({
     titleStretch: {
